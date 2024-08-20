@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    
+
+<body class="normal">
+    <main>
+        <form action="" class="formulario" id="formulario">
+            <!-- Usuario -->
+            <div class="formularioGrupo" id="grupoUsuario">
+                <label for="usuario" class="formularioLabel">Usuario</label>
+                <div class="formularioGrupoInput">
+                    <input type="text" class="formularioInput" name="usuario" id="usuario" placeholder="john123" />
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+                </div>
+                <p class="formularioInputError">
+                    El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.
+                </p>
+            </div>
+
+            <!-- Nombre -->
+            <div class="formularioGrupo" id="grupoNombre">
+                <label for="nombre" class="formularioLabel">Nombre</label>
+                <div class="formularioGrupoInput">
+                    <input type="text" class="formularioInput" name="nombre" id="nombre" placeholder="John Doe" />
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+                </div>
+                <p class="formularioInputError">
+                    El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.
+                </p>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="formularioGrupo" id="grupoPassword">
+                <label for="password" class="formularioLabel">Contraseña</label>
+                <div class="formularioGrupoInput">
+                    <input type="password" class="formularioInput" name="password" id="password" />
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+                </div>
+                <p class="formularioInputError">
+                    La contraseña tiene que ser de 4 a 12 dígitos.
+                </p>
+            </div>
+
+            <!-- Contraseña 2 -->
+            <div class="formularioGrupo" id="grupoPassword2">
+                <label for="password2" class="formularioLabel">Repetir Contraseña</label>
+                <div class="formularioGrupoInput">
+                    <input type="password" class="formularioInput" name="password2" id="password2" />
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+                </div>
+                <p class="formularioInputError">
+                    Ambas contraseñas deben ser iguales.
+                </p>
+            </div>
+
+            <!--Correo Electronico -->
+            <div class="formularioGrupo" id="grupoCorreo">
+                <label for="correo" class="formularioLabel">Correo Electrónico</label>
+                <div class="formularioGrupoInput">
+                    <input type="email" class="formularioInput" name="correo" id="correo"
+                        placeholder="correo@correo.com" />
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+                </div>
+                <p class="formularioInputError">
+                    El correo solo puede contener letras, numeros, puntos, guiones y
+                    guion bajo.
+                </p>
+            </div>
+            <!-- País -->
+            <div class="formularioGrupo" id="grupoPais">
+                <label for="pais" class="formularioLabel">País</label>
+                <div class="formularioGrupoInput">
+                    <select class="formularioInput" name="pais" id="pais">
+                        <option value="">Selecciona un país</option>
+                    </select>
+                </div>
+                <p class="formularioInputError">Por favor, selecciona un país.</p>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="formularioGrupo" id="grupoTelefono">
+                <label for="telefono" class="formularioLabel">Teléfono</label>
+                <div class="formularioGrupoInput">
+                    <input type="text" class="formularioInput" name="telefono" id="telefono" placeholder="4491234567" />
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+                </div>
+                <p class="formularioInputError">
+                    El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                </p>
+            </div>
+
+            <!-- Terminos y Condiciones -->
+            <div class="formularioGrupo" id="grupoTerminos">
+                <label class="formularioLabel">
+                    <input class="formularioCheckbox" type="checkbox" name="terminos" id="terminos" />
+                    Acepto los Terminos y Condiciones
+                </label>
+            </div>
+
+            <div class="formularioMensaje" id="formularioMensaje">
+                <p>
+                    <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
+                    favor,rellena el formulario correctamente.
+                </p>
+            </div>
+
+            <div class="formularioGrupo formularioGrupoBtnEnviar">
+                <button type="submit" class="formularioBtn">Enviar</button>
+                <p class="formularioMensajeExito" id="formularioMensajeExito">
+                    Formulario enviado exitosamente!
+                </p>
+            </div>
+        </form>
+        <button onclick="setStyle('normal')">Estilo Normal</button>
+        <button onclick="setStyle('highContrast')">Estilo Alto Contraste</button>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/f1838c9124.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
